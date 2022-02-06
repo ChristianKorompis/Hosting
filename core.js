@@ -19,11 +19,11 @@
     var isMobilepost = sitePost.hasClass('penggaya-post-dalam');
     
     if (viewportWidth < 1079) {
-			if (isMobilepost) {
+			if (!isMobilepost) {
 				sitePost.addClass('penggaya-post-dalam');
 			}
 		} else {
-			if (!isMobilepost) {
+			if (isMobilepost) {
 				sitePost.removeClass('penggaya-post-dalam');
 			}
 		}
