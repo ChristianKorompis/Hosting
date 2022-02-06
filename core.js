@@ -18,7 +18,7 @@
 
     var isMobilepost = sitePost.hasClass('penggaya-post-dalam');
     
-    if (viewportWidth < 1079 {
+    if (viewportWidth < 1079) {
 			if (isMobilepost) {
 				sitePost.addClass('penggaya-post-dalam');
 			}
