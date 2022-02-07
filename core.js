@@ -15,8 +15,24 @@
     var isMobile = siteHeader.hasClass('mobile');
     
     var sitePost = $('#main');
+		
+    var desktop = $('.mode-desktop');
+		
+    var thumbnail = $('.image-mobile-post-v1');
+		
+    var isDesktopMode = thumbnail.appendTo('.image-mobile-post');
 
     var isMobilepost = sitePost.hasClass('penggaya-post-dalam');
+		
+    if (viewportWidth > 1079) {
+			if (!isDesktopMode) {
+				thumbnail.appendTo('.mode-desktop');
+			}
+		} else {
+			if (isDesktopMode) {
+				thumbnail.appendTo('.image-mobile-post');
+			}
+		}
     
     if (viewportWidth < 1080) {
 			if (!isMobilepost) {
