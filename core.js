@@ -11,6 +11,9 @@
 		;
 
 		var siteHeader = $('.site-header');
+    var thumbnail = $('.image-mobile-post-v1');
+		
+    var isDesktop = thumbnail.appendTo('.mode-desktop');
     
     var isMobile = siteHeader.hasClass('mobile');
     
@@ -29,12 +32,12 @@
 		}
 
 		if (viewportWidth > 1079) {
-			if (!isMobile) {
+			if (!isDesktop) {
 				siteHeader.addClass('mobile');
 				$('.image-mobile-post-v1').appendTo('.mode-desktop');
 			}
 		} else {
-			if (isMobile) {
+			if (isDesktop) {
 				siteHeader.removeClass('mobile');
 				$('.image-mobile-post-v1').appendTo('.image-mobile-post');
 			}
