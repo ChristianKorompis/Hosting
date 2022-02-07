@@ -15,24 +15,8 @@
     var isMobile = siteHeader.hasClass('mobile');
     
     var sitePost = $('#main');
-		
-    var desktop = $('.mode-desktop');
-		
-    var thumbnail = $('.image-mobile-post-v1');
-		
-    var isDesktopMode = thumbnail.appendTo('.image-mobile-post');
 
     var isMobilepost = sitePost.hasClass('penggaya-post-dalam');
-		
-    if (viewportWidth > 1079) {
-			if (!isDesktopMode) {
-				thumbnail.appendTo('.mode-desktop');
-			}
-		} else {
-			if (isDesktopMode) {
-				thumbnail.appendTo('.image-mobile-post');
-			}
-		}
     
     if (viewportWidth < 1080) {
 			if (!isMobilepost) {
@@ -44,15 +28,15 @@
 			}
 		}
 
-		if (viewportWidth < 1008) {
+		if (viewportWidth > 1079) {
 			if (!isMobile) {
 				siteHeader.addClass('mobile');
-				$('body').addClass('mobile');
+				$('.image-mobile-post-v1').appendTo('.mode-desktop');
 			}
 		} else {
 			if (isMobile) {
 				siteHeader.removeClass('mobile');
-				$('body').removeClass('mobile');
+				$('.image-mobile-post-v1').appendTo('.image-mobile-post');
 			}
 		}
 	});
