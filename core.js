@@ -52,7 +52,7 @@
 			}
 		} else {
 			if (isDesktopShare) {
-				$('.button-subscribe-share-v1').appendTo('.image-mobile-post');
+				$('.button-subscribe-share-v1').appendTo('.button-subscribe-share');
 			}
 		}
 	});
