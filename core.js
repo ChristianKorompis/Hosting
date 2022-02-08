@@ -17,7 +17,7 @@
     
     var isMobile = siteHeader.hasClass('mobile');
     
-    var sitePost = $('#main');
+    var sitePost = $('.penutup-layout-post');
 
     var isMobilepost = sitePost.hasClass('penggaya-post-dalam');
     
